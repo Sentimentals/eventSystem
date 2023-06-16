@@ -1,0 +1,65 @@
+/* 添加网页背景 */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    background: url(../images/login_bg.gif) no-repeat center;
+}
+/* 加入网页logo */
+.logo {
+    margin-top: 20px;
+    margin-left: 50px;
+}
+/* 初始化登录注册框 */
+.loginAndReg {
+    position: absolute;
+    min-height: 300px;
+    width: 350px;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -60%);
+}
+/* 登录注册框的头部 */
+.box_title {
+    height: 60px;
+    background: url(../images/login_title.png) no-repeat center;
+}
+/* 隐藏注册框 */
+.box_reg {
+    display: none;
+}
+/* 将输入框的背景改为透明色 */
+.layui-form input {
+    background: transparent;
+}
+/* 更改输入框之间的间距 */
+
+.layui-form-item {
+    margin-top: 5px;
+}
+/* 给父类进行绝对定位 */
+.layui-form .layui-input-wrap {
+    position: relative;
+}
+/* 子类进行相对定位 */
+.layui-form .layui-input-prefix {
+    position: absolute;
+    left: 8px;
+    top: 11px;
+}
+/* 增加内边距 */
+.layui-input {
+    padding-left: 28px;
+}
+/* 更改链接位置 */
+.layui-form #box_reg {
+    display: flex;
+    justify-content: flex-end;
+}
+/* 更改链接位置 */
+.layui-form #box_login {
+    display: flex;
+    justify-content: flex-end;
+}
