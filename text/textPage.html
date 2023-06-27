@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 导入layui的css文件 -->
+    <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+    <!-- 导入自己的css文件 -->
+    <link rel="stylesheet" href="../assets/css/text/textPage.css">
+</head>
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">文章列表</div>
+        <div class="layui-card-body">
+            <!-- 筛选框部分 -->
+            <div class="layui-form layui-row layui-col-space16">
+                <div class="layui-col-md6">
+                    <select id="textList">
+                        <option value="">所有分类</option>
+                    </select>
+                </div>
+                <div class="layui-col-md6">
+                    <select>
+                      <option value="">所有状态</option>
+                      <option value="已发布">已发布</option>
+                      <option value="草稿">草稿</option>
+                    </select>
+                </div>
+                <button type="button" class="layui-btn layui-btn-normal layui-btn-radius">筛选文章</button>
+            </div>
+            <!-- 表格部分 -->
+            <table class="layui-table">
+                <colgroup>
+                    <col>
+                    <col width="150">
+                    <col>
+                    <col width="150">
+                    <col width="150">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th style="text-align: center;">文章标题</th>
+                        <th style="text-align: center;">分类</th>
+                        <th style="text-align: center;">发表时间</th>
+                        <th style="text-align: center;">状态</th>
+                        <th style="text-align: center;">操作</th>
+                    </tr> 
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>孔子</td>
+                        <td>华夏</td>
+                        <td>华夏</td>
+                        <td>华夏</td>
+                        <td>有朋至远</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 分页部分 -->
+        </div>
+    </div>
+    <!-- 导入layui的js文件 -->
+    <script src="../assets/lib/layui/layui.all.js"></script>
+    <!-- 导入jquery -->
+    <script src="../assets/lib/jquery.js"></script>
+    <!-- 导入自己的js文件 -->
+    <script src="../assets/js/text/textPage.js"></script>
+    <script>
+        $.ajax({
+            method: 'get',
+            url: 'http://big-event-api-t.itheima.net/my/article/list',
+            data: reqData,
+            headers: {
+                Authorization: localStorage.getItem('token')
+            },
+            success: function (res) {
+                if (res.status !== 0) {
+                    return
+                }
+                let arr = []
+                console.log(res);
+            }
+        })
+    </script>
+</body>
+</html>

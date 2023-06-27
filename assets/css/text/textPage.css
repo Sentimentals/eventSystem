@@ -1,0 +1,13 @@
+/* 修改背景色和内边距 */
+html, body {
+    padding: 10px;
+    background-color: #c5c1c1;
+}
+/* 修改表格体内文字样式 */
+.layui-table tbody {
+    text-align: center;
+}
+.layui-col-md6 {
+    margin-right: 20px;
+    width: 320px;
+}

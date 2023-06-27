@@ -1,0 +1,31 @@
+/* 修改背景色和内边距 */
+html, body {
+    padding: 10px;
+    background-color: #c5c1c1;
+}
+/* 将表格体里的内容居中 */
+.layui-table tbody tr {
+    text-align: center;
+}
+/* 修改添加文章按钮样式 */
+.layui-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* 修改弹出框中输入框的样式 */
+.textInput {
+    margin-top: 20px;
+    width: 500px;
+}
+/* 修改弹出框内按钮的样式 */
+#sureAddBtn, .sureEditBtn {
+    position: relative;
+    top: 40px;
+    left: 260px;
+}
+#resetBtn {
+    position: relative;
+    top: 40px;
+    left: 290px;
+}

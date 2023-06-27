@@ -1,0 +1,41 @@
+/* 消除a链接的所有动画效果 */
+a {
+    transition: none !important;
+}
+/* 设置图片的大小 */
+#welcome {
+    width: 100%;
+    height: 100%;
+}
+/* 更改字体图标位置 */
+.layui-side .layui-icon {
+    display: inline-block;
+    margin-right: 8px;
+}
+.layui-side span.layui-icon {
+    margin-left: 25px;
+}
+/* 设置默认头像 */
+.headerMsg {
+    display: inline-block;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #3b4044;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+}
+/* 默认隐藏有图片的头像 */
+#afterPic {
+    display: none;
+}
+/* 美化iframe */
+iframe {
+    width: 100%;
+    height: 100%;
+}
+/* 设置底部区域文字的位置 */
+.layui-footer {
+    text-align: center;
+}

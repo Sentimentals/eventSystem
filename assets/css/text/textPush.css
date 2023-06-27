@@ -1,0 +1,10 @@
+/* 修改背景色和内边距 */
+html, body {
+    padding: 10px;
+    background-color: #c5c1c1;
+}
+/* 修改按钮的位置 */
+.btnPost {
+    display: flex;
+    justify-content: center;
+}

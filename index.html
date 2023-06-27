@@ -4,9 +4,122 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>后台主页</title>
+    <!-- 导入layui固有的css样式 -->
+    <link rel="stylesheet" href="./assets/lib/layui-v2.8.7/layui/css/layui.css">
+    <!-- 导入自己的css样式 -->
+    <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
-    
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo layui-hide-xs layui-bg-black">
+                <img src="./assets/images/welcome.png" id="welcome">
+            </div>
+            <!-- 头部区域 -->
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item layui-hide layui-show-sm-inline-block">
+                    <a href="javascript:;">
+                        <img src="//unpkg.com/outeres@0.0.10/img/layui/icon-v2.png" class="layui-nav-img" id="afterPic">
+                        <i class="headerMsg">A</i>
+                        个人中心
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" id="usName">A</a></dd>
+                        <dd><a href="./user/userMsg.html" target="fm">基本资料</a></dd>
+                        <dd><a href="./user/userPwd.html" target="fm">重置密码</a></dd>
+                        <dd><a href="./user/userAva.html" target="fm">更换头像</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item" lay-header-event="menuRight" lay-unselect id="logout_btn">
+                    <a href="javascript:;">
+                        <i class="layui-icon layui-icon-logout"></i>
+                        退出系统
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree" lay-shrink="all">
+                    <li class="layui-nav-item layui-this" id="first">
+                        <a href="./home/dashboard.html" target="fm">
+                            <i class="layui-icon layui-icon-home"></i>
+                            首页
+                        </a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a class="" href="javascript:;">
+                            <i class="layui-icon layui-icon-app"></i>
+                            文章管理
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a href="./text/textList.html" target="fm">
+                                    <span class="layui-icon layui-icon-file"></span>
+                                    文章类别
+                                </a>
+                            </dd>
+                            <dd>
+                                <a href="./text/textPage.html" target="fm">
+                                    <span class="layui-icon layui-icon-file"></span>
+                                    文章列表
+                                </a>
+                            </dd>
+                            <dd>
+                                <a href="./text/textPush.html" target="fm">
+                                    <span class="layui-icon layui-icon-file"></span>
+                                    发表文章
+                                </a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">
+                            <i class="layui-icon layui-icon-user"></i>
+                            个人中心
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a href="./user/userMsg.html" target="fm">
+                                    <span class="layui-icon layui-icon-set-fill"></span>
+                                    基本资料
+                                </a>
+                            </dd>
+                            <dd>
+                                <a href="./user/userPwd.html" target="fm">
+                                    <span class="layui-icon layui-icon-set-fill"></span>
+                                    重置密码
+                                </a>
+                            </dd>
+                            <dd>
+                                <a href="./user/userAva.html" target="fm">
+                                    <span class="layui-icon layui-icon-set-fill"></span>
+                                    更换头像
+                                </a>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 内容主体区域 -->
+        <div class="layui-body">
+            <iframe src="./home/dashboard.html" frameborder="0" name="fm"></iframe>
+        </div>
+        <!-- 底部固定区域 -->
+        <div class="layui-footer">
+            © 随便吧后台管理系统
+        </div>
+    </div>
+    <!-- 导入layui固有的js文件 -->
+    <script src="./assets/lib/layui-v2.8.7/layui/layui.js"></script>
+    <!-- 导入jquery文件 -->
+    <script src="./assets/lib/jquery.js"></script>
+    <!-- 导入自己书写的js文件 -->
+    <script src="./assets/js/index.js"></script>
+    <script>
+    </script>
 </body>
 </html>
